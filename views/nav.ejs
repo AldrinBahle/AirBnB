@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+      <link rel="stylesheet" href="/materialize/css/materialize.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+      <link rel="stylesheet" href="/materialize/css/style.css">
+    <title>AirBnB</title>
+
+    <style>
+      header{
+        background: url('/materialize/img/airbnb_pixabay.jpg');
+        background-size: cover;
+        background-position: center;
+
+        min-height: 500px;
+      }
+
+     
+      @media screen and (max-width: 670px){
+        header{
+          min-height: 250px;
+        }
+      }
+      /* .container{
+        padding-top: 4vw;
+      } */
+    
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-wraper black darken-3" >
+       <div class="container">
+         <a href="/" class="brand-logo center red-text darken-5">AirBnB</a>
+         <a href="/" class="sidenav-trigger left" data-target="mobile-menu"> <i class="fa fa-bars"></i></a>
+         <ul class="right">
+           <% if(user){ %>
+             <li>Welcome: <%= user.username %></li>
+             <li><a href="users/logout">Logout</a></li>
+             <% }else { %>
+           <li><a href="users/login">Login</a></li>
+           <li><a href="users/signup">Register</a></li>
+           
+
+           
+           <% } %>
+         </ul>
+       </div>
+         <ul class="sidenav grey lighten-5" id="mobile-menu">
+             <% if(user){ %>
+               <li>Welcome: <%= user.username %></li>
+               <li><a href="users/logout">Logout</a></li>
+             <li><a href="landlord/dashbord">Dashbord</a></li>
+             <li><a href="profile">Profile</a></li>
+
+
+               <% }else { %>
+             <li><a href="users/login">Login</a></li>
+             <li><a href="users/signup">Register</a></li>
+             <% } %>
+         </ul>
+
+      </nav>
+    </header>
+
+
+    
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous">
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+    <!--footer section-->
+       
+  <script>
+      $(document).ready(function(){
+        $('.materialboxed').materialbox();
+        $('select').material_select();  
+         
+        });
+       
+        
+    </script> 
+    <script>M.AutoInit(); </script>
+</body>
+      </html>
